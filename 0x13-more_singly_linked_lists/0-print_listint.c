@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * print_listint - prints all the elements of a linked list
- * @h: linked list of type listint_t to print
+ * print_listint - prints the elements of a linked list
+ * @h: Pointer to the header of the linked list
  *
- * Return: number of nodes
+ * Return: the number of nodes in the linked list
  */
 size_t print_listint(const listint_t *h)
 {
