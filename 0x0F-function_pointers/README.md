@@ -1,1 +1,0 @@
-practising with function pointers.
