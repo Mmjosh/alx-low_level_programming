@@ -1,1 +1,0 @@
-Understanding C compilation process.
