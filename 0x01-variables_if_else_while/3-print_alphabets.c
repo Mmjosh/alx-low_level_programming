@@ -1,22 +1,17 @@
-#include <stdlib.h>
 #include <stdio.h>
+
 /**
- * main - prints all lowercase alphabets followed by uppercase alphabets
+ * main - prints all the alphabets 1st in lowercase then uppercase
  * Return: 0
  */
 int main(void)
 {
-	int a = 'a';
-	int A = 'A';
+	int a = 'a', A = 'A';
 
 	while (a <= 'z')
-	{
-	putchar(a++);
-	}
+		putchar(a++);
 	while (A <= 'Z')
-	{
-	putchar(A++);
-	}
+		putchar(A++);
 	putchar('\n');
 
 	return (0);
