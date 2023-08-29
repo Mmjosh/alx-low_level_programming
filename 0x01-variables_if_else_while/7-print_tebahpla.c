@@ -1,16 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - prints all alphabets in reverse order and in lowercase
+ * main - prints the alphabets in lowercase but in reverse order
  * Return: 0
  */
 int main(void)
 {
-	int z = 'z';
+	int a = 'z';
 
-	while (z >= 'a')
+	while (a >= 'a')
 	{
-	putchar(z--);
+		putchar(a);
+		a--;
 	}
 	putchar('\n');
 	return (0);
