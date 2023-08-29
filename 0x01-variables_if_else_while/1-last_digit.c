@@ -1,8 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+
 /**
- * main - states num assigned to n,whether its>5,=0,OR <6 and not 0
+ * main - checks lasts digit of and prints it out
  * Return: 0
  */
 int main(void)
@@ -11,19 +12,11 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	/* using if to determine whether n=0,>5,<6 and not 0 */
 	if (n % 10 > 5)
-	{
-	printf("Last digit of %d is %d and is greater than 5\n", n, n % 10);
-	}
-	else if (n % 10 == 0)
-	{
-	printf("Last digit of %d is %d and is 0\n", n, n % 10);
-	}
-	else if (n % 10 < 6 && n % 10 != 0)
-	{
-	printf("Last digit of %d is %d and is less than 6 and not 0\n", n, n % 10);
-	}
-
+		printf("Last digit of %d is %d and is greater than 5\n", n, (n % 10));
+	if (n % 10 == 0)
+		printf("Last digit of %d is %d and is 0\n", n, (n % 10));
+	if (n % 10 < 6)
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, (n % 10));
 	return (0);
 }
