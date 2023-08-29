@@ -1,19 +1,21 @@
-#include <stdlib.h>
 #include <stdio.h>
+
 /**
- * main - prints all single digit numbers of base 10 starting from 0
+ * main - prints all single digit numbers of base 10
+ * starting from zero
+ *
  * Return: 0
  */
 int main(void)
 {
-	int num = 0;
+	int a = 0;
 
-	while (num <= 9)
+	while (a <= 9)
 	{
-	printf("%d", num);
-	num++;
+		putchar(a + '0');
+		a++;
 	}
 	putchar('\n');
+
 	return (0);
 }
-
