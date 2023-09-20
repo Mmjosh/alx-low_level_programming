@@ -9,7 +9,7 @@ int _islower(int c)
 {
 	/* '97 < c > 122' - ASCII Range for lowercase characters */
 	int i;
-	
+
 	for (i = 97 ; i <= 122 ; i++)
 	{
 		if (c == i)
