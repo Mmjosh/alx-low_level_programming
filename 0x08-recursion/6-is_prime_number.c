@@ -4,7 +4,7 @@
  * is_divisible - checks if 'n' is divisible by a given divisor 'd'
  * @n: the number we're checking its divisiblity with 'd'
  * @d: the divisor
- * Return: 1 if 'n' if any divisor exists that evenly divides 'n'
+ * Return: 1 if any divisor exists that evenly divides 'n'
  * otherwise return 0.
  */
 int is_divisible(int n, int d)
