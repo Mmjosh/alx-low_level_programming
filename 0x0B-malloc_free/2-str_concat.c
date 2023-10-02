@@ -13,26 +13,31 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *s;
-	int i, j, l1, l2;
+	int l1 = 0, l2 = 0;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 != NULL)
+		l1 = strlen(s1);
+
+	if (s2 != NULL)
+		l2 = strlen(s2);
+
+	if (l1 == 0 && l2 == 0)
 		return (NULL);
-
-	l1 = strlen(s1);
-	l2 = strlen(s2);
 
 	s = malloc((l1 + l2 + 1) * sizeof(char));
 
 	if (s == NULL)
 		return (NULL);
 
-	for (i = 0 ; i < l1 ; i++)
-		s[i] = s1[i];
-
-	for (j = 0 ; j < l2 ; j++)
-		s[i + j] = s2[j];
-
-	s[i + j] = '\0';
+	if (s1 != NULL)
+	{
+		strcpy(s, s1);
+		
+		if (s2 != NULL)
+			strcat(s, s2);
+	}
+	else
+		strcpy(s, s2);
 
 	return (s);
 }
