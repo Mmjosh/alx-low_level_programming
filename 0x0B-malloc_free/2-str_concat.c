@@ -32,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 	if (s1 != NULL)
 	{
 		strcpy(s, s1);
-		
+
 		if (s2 != NULL)
 			strcat(s, s2);
 	}
