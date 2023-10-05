@@ -9,22 +9,27 @@ int _strlen_recursion(char *s);
  * @s1: pointer to the first string
  * @s2: pointer to the 2nd string
  * @n: the first 'n' characters of 's2'
+ * If 'n' is greater or equal to the length of s2 then use the entire
+ * string 's2'
  * Return: pointer to the newly allocated space containing the
  * concatenated string else return 'NULL'
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, l1 = 0;
+	unsigned int i, l1 = 0, l2 = 0;
 	char *s;
 
 	if (s1 != NULL)
 	{
 		l1 = _strlen_recursion(s1);
 	}
-	if (s2 == NULL)
+	if (s2 != NULL)
 	{
-		return (NULL);
+		l2 = _strlen_recursion(s2);
 	}
+
+	if (n >= l2)
+		n = l2;
 
 	s = malloc((l1 + n + 1) * sizeof(char));
 	if (s == NULL)
