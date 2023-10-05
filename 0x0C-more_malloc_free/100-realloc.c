@@ -10,7 +10,7 @@
  * @old_size: size in bytes of the initial memory location before
  * reallocation.
  * @new_size: the new size in bytes
- * pointer to the new 'reallocated' memory or 'NULL'
+ * Return: pointer to the new 'reallocated' memory or 'NULL'
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
