@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * add_new_end - adds a new node at the end of a 'list_t'
+ * add_node_end - adds a new node at the end of a 'list_t'
  * @head: pointer to a pointer to head of the list
  * @str: pointer to the string to be duplicated n stored in the new node
  * Return: address of the new node/element, or NULL if it fails
@@ -35,6 +35,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	else
 	{
 		list_t *current = *head;
+
 		while (current->next != NULL)
 		{
 			current = current->next;
