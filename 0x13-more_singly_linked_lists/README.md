@@ -11,7 +11,7 @@ lists.
 
 ## Requirements
 
--Allowed editors: vi, vim, emacs
+-Allowed editors: vi, vim, emacs  
 -Compilation: Ubuntu using `gcc` with the options, `-Wall -Werror -Wextra -pedantic -std=gnu89`
 
 ## Data Structure
