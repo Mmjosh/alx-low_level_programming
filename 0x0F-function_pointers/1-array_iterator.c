@@ -15,6 +15,8 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 
 	if (array == NULL || size <= 0)
 		exit(EXIT_FAILURE);
+	else if (action == NULL)
+		exit(98);
 	else
 		for (i = 0; i < (int)size; i++)
 		{
