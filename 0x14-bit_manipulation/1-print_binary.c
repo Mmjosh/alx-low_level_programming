@@ -17,12 +17,15 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	while (n > 0)
+	if (n >> 1 != 0)
 	{
-		lsb = n & 1;
-		u_v |= (lsb << i_th);
-		n >>= 1;
-		i_th++;
+		while (n > 0)
+		{
+			lsb = n & 1;
+			u_v |= (lsb << i_th);
+			n >>= 1;
+			i_th++;
+		}
 	}
 
 	while (i_th > 0)
