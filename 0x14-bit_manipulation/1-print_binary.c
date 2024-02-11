@@ -11,21 +11,18 @@ void print_binary(unsigned long int n)
 	unsigned int i_th = 0;
 	unsigned int lsb;
 
-	if (n == 0 && (n >> 1) == 0)
+	if ((n >> 1) == 0 && n == 0)
 	{
 		_putchar('0');
 		return;
 	}
 
-	if (n >> 1 != 0)
+	while (n > 0)
 	{
-		while (n > 0)
-		{
-			lsb = n & 1;
-			u_v |= (lsb << i_th);
-			n >>= 1;
-			i_th++;
-		}
+		lsb = n & 1;
+		u_v |= (lsb << i_th);
+		n >>= 1;
+		i_th++;
 	}
 
 	while (i_th > 0)
